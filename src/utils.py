@@ -54,7 +54,7 @@ def get_area_under_curve(true,pred,file_path,model_name,types):
     plt.legend(title=f"AUC Score:{np.round(auc_score1,6)}")
     
     #
-    plt.savefig(os.path.join(file_path,f'{model_name}_{types}_ROC.jpg'),dpi=300)
+    plt.savefig(os.path.join(file_path,f'{model_name}_{types}_ROC.jpg')) #,dpi=300
     
     plt.close(fig)
 
@@ -123,5 +123,6 @@ def Evaluate_Models(X_train,X_test,y_train,y_test):
                 report['auc_score_test'].append(roc_auc_score(y_test,np.argmax(y_pred_test_proba,axis=1)))
                 # report['confusion_matrix_train'].append(confusion_matrix(y_train,y_pred_train))
                 # report['confusion_matrix_test'].append(confusion_matrix(y_test,y_pred_test))
+
 
       return report               
