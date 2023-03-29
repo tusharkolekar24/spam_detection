@@ -49,6 +49,7 @@ class DataPredictionPipeline:
                 return model_performance_summary
 
            except Exception as e:
+                  
                   raise CustomException(e,sys)
            
 if __name__=="__main__":
